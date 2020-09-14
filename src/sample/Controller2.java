@@ -19,6 +19,7 @@ public class Controller2{
     @FXML public Spinner servings;
     @FXML public Button save;
 
+
     private Recipe recipe;
 
 

@@ -16,6 +16,8 @@ public class Main extends Application {
         FXMLLoader ldr = new FXMLLoader();
         ldr.setLocation(new URL("file:src/sample/main.fxml"));
         Scene scene = ldr.load();
+        Controller c = ldr.getController();
+        c.setPrimaryStage(primaryStage);
         //Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(scene);
