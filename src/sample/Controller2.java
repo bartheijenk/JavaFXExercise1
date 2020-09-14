@@ -2,14 +2,10 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import sample.Model.Ingredient;
 import sample.Model.Recipe;
 import sample.data.RecipeJSONParser;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class Controller2{
 
