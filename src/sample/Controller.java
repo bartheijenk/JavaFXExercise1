@@ -14,6 +14,7 @@ import javafx.scene.control.Spinner;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import sample.Model.Ingredient;
@@ -34,6 +35,9 @@ public class Controller implements Initializable {
     @FXML public GridPane gridPane;
     @FXML public Text ingredientListView;
     @FXML Button edit;
+    @FXML Button uploadTest;
+
+    private Stage primaryStage;
 
     ArrayList<Recipe> recipes;
     private boolean wide = false;
@@ -94,6 +98,16 @@ public class Controller implements Initializable {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void uploadTest(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
+        fileChooser.showOpenDialog(primaryStage);
+    }
+
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
     }
 
 
